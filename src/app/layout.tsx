@@ -52,19 +52,19 @@ export default function RootLayout({
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href="/apple-touch-icon.png"
+          href="/web-app-manifest-192x192.png"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="32x32"
-          href="/favicon-32x32.png"
+          href="/web-app-manifest-512x512.png"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="16x16"
-          href="/favicon-16x16.png"
+          href="/web-app-manifest-512x512.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
@@ -110,7 +110,7 @@ export default function RootLayout({
         <MobileMenu />
 
         {/* Replaced Navbar with Dock/Floater. Added pb-32 to account for Dock height */}
-        <main className="min-h-screen flex flex-col pb-32">{children}</main>
+        <main className="flex flex-col min-h-screen pb-32">{children}</main>
 
         <Terminal />
         <Footer />
