@@ -23,7 +23,7 @@ export function MobileMenu() {
     <>
       {/* Search / Toggle Button */}
       <motion.button
-        className="fixed top-6 right-6 z-[60] p-3 rounded-full bg-white/10 dark:bg-slate-900/10 backdrop-blur-md border border-white/20 dark:border-slate-800/20 shadow-lg text-slate-800 dark:text-white md:hidden"
+        className="fixed top-6 right-6 z-[60] p-3 rounded-full bg-white/10  backdrop-blur-md border border-white/50  shadow-lg text-white md:hidden"
         onClick={toggleMenu}
         whileTap={{ scale: 0.9 }}
       >

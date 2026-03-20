@@ -88,12 +88,9 @@ const skills: Skill[] = [
 
 export default function Skills() {
   return (
-    <Section
-      id="skills"
-      className="relative overflow-hidden bg-slate-50 dark:bg-slate-900/50"
-    >
+    <Section id="skills" className="relative overflow-hidden bg-slate-900/50">
       {/* Decorative Background */}
-      <div className="absolute inset-0 z-0 pointer-events-none opacity-5 dark:opacity-10">
+      <div className="absolute inset-0 z-0 pointer-events-none opacity-10">
         <Image
           src="/images/ui/ai-flow.png"
           alt=""
@@ -110,10 +107,10 @@ export default function Skills() {
           transition={{ duration: 0.5 }}
           className="mb-12 text-center"
         >
-          <h2 className="mb-4 text-3xl font-bold md:text-4xl text-slate-900 dark:text-white">
+          <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">
             Skills & Expertise
           </h2>
-          <p className="text-slate-600 dark:text-slate-400">
+          <p className="text-slate-400">
             Technologies I use to build amazing web experiences.
           </p>
         </motion.div>
@@ -131,7 +128,7 @@ export default function Skills() {
                 y: -5,
                 boxShadow: "0 10px 30px -10px rgba(0,0,0,0.1)",
               }}
-              className="flex flex-col items-center justify-center gap-3 p-6 text-center bg-white border shadow-sm dark:bg-slate-800 rounded-xl border-slate-100 dark:border-slate-700 group"
+              className="flex flex-col items-center justify-center gap-3 p-6 text-center border shadow-sm bg-slate-800 rounded-xl border-slate-500 group"
             >
               <div
                 className={`relative w-16 h-16 p-3 rounded-full flex items-center justify-center transition-colors ${skill.color}`}
@@ -145,7 +142,7 @@ export default function Skills() {
                 />
               </div>
               <div>
-                <span className="block font-semibold text-slate-800 dark:text-slate-200">
+                <span className="block font-semibold text-slate-200">
                   {skill.name}
                 </span>
                 <span className="text-xs font-medium text-slate-400">

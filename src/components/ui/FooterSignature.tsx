@@ -22,7 +22,7 @@ export function FooterSignature() {
         <div
           className={`absolute inset-0 overflow-hidden transition-[width] duration-700 ease-in-out ${isActive ? "w-full" : "w-0"}`}
         >
-          <h1 className="text-4xl font-bold tracking-tighter md:text-8xl text-slate-900 dark:text-white whitespace-nowrap">
+          <h1 className="text-4xl font-bold tracking-tighter text-slate-400 md:text-8xl whitespace-nowrap">
             Sourabh Nateria
           </h1>
         </div>

@@ -61,7 +61,7 @@ export function HeroVisual() {
       initial={{ opacity: 0, x: 20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8, delay: 0.5 }}
-      className="hidden lg:block relative w-full h-[400px] perspective-1000"
+      className="block relative w-full h-[400px] perspective-1000"
     >
       {/* Floating Window Container */}
       <motion.div
@@ -75,7 +75,7 @@ export function HeroVisual() {
           rotateX: { duration: 5, repeat: Infinity, ease: "easeInOut" },
           rotateY: { duration: 6, repeat: Infinity, ease: "easeInOut" },
         }}
-        className="absolute right-0 top-1/2 -translate-y-1/2 w-[500px] h-[320px] bg-slate-900/90 backdrop-blur-xl rounded-xl border border-slate-700/50 shadow-2xl overflow-hidden"
+        className="absolute right-0 top-1/2 -translate-y-1/2 w-full md:w-[500px] h-[320px] bg-slate-900/90 backdrop-blur-xl rounded-xl border border-slate-700/50 shadow-2xl overflow-hidden"
       >
         {/* Window Header */}
         <div className="flex items-center gap-2 px-4 py-3 border-b border-slate-700/50 bg-slate-900/50">

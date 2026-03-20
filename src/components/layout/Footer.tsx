@@ -3,7 +3,7 @@ import { FooterSignature } from "@/components/ui/FooterSignature";
 
 export default function Footer() {
   return (
-    <footer className="relative pt-12 pb-40 overflow-hidden border-t bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-800">
+    <footer className="relative pt-12 pb-40 overflow-hidden border-t bg-slate-900 border-slate-800">
       <div className="container flex flex-col items-center gap-6 px-6 mx-auto">
         {/* Massive Signature with Hover Effect */}
         <FooterSignature />
@@ -44,7 +44,7 @@ function SocialLink({ href, icon }: { href: string; icon: React.ReactNode }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="p-3 transition-all bg-white rounded-full shadow-sm dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:shadow-md"
+      className="p-3 transition-all rounded-full shadow-sm bg-slate-800 text-slate-400 hover:text-blue-400 hover:shadow-md"
     >
       {icon}
     </a>

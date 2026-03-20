@@ -17,44 +17,44 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="group relative bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 dark:border-slate-700 flex flex-col h-full"
+      className="relative flex flex-col h-full overflow-hidden transition-all duration-300 border shadow-sm group bg-slate-800 rounded-2xl hover:shadow-xl border-slate-700"
     >
-      <div className="relative h-48 w-full overflow-hidden">
+      <div className="relative w-full h-48 overflow-hidden">
         {/* Using generic Image component handling. If image fails, fallback to color. */}
         <Image
           src={project.image}
           alt={project.title}
           fill
-          className="object-cover group-hover:scale-105 transition-transform duration-500"
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
-        <div className="absolute inset-0 bg-blue-600/0 group-hover:bg-blue-600/10 transition-colors duration-300" />
+        <div className="absolute inset-0 transition-colors duration-300 bg-blue-600/0 group-hover:bg-blue-600/10" />
       </div>
 
-      <div className="p-6 flex flex-col flex-grow">
+      <div className="flex flex-col flex-grow p-6">
         <div className="flex items-start justify-between mb-2">
-          <h3 className="text-xl font-bold text-slate-900 dark:text-white group-hover:text-blue-600 transition-colors">
+          <h3 className="text-xl font-bold text-white transition-colors group-hover:text-blue-600">
             {project.title}
           </h3>
           <a
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-slate-400 hover:text-blue-600 transition-colors"
+            className="transition-colors text-slate-400 hover:text-blue-600"
           >
             <ArrowUpRight size={20} />
           </a>
         </div>
 
-        <p className="text-slate-600 dark:text-slate-400 text-sm mb-4 line-clamp-3">
+        <p className="mb-4 text-sm text-slate-400 line-clamp-3">
           {project.description}
         </p>
 
-        <div className="mt-auto flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 mt-auto">
           {project.tags?.map((tag) => (
             <span
               key={tag}
-              className="px-2 py-1 text-xs font-medium bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-md"
+              className="px-2 py-1 text-xs font-medium rounded-md bg-slate-700 text-slate-300"
             >
               {tag}
             </span>

@@ -45,7 +45,7 @@ export default function Contact() {
   };
 
   return (
-    <Section id="contact" className="bg-white dark:bg-slate-950">
+    <Section id="contact" className="bg-slate-950">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -54,10 +54,10 @@ export default function Contact() {
           transition={{ duration: 0.5 }}
           className="mb-16 text-center"
         >
-          <h2 className="mb-4 text-3xl font-bold md:text-4xl text-slate-900 dark:text-white">
+          <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">
             Get in Touch
           </h2>
-          <p className="text-slate-600 dark:text-slate-400">
+          <p className="text-slate-400">
             Have a question or want to work together?
           </p>
         </motion.div>
@@ -97,16 +97,16 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="p-8 border shadow-sm bg-slate-50 dark:bg-slate-900 rounded-2xl border-slate-100 dark:border-slate-800"
+            className="p-8 border shadow-sm border-slate-500 bg-slate-900 rounded-2xl "
           >
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
               <div>
-                <label className="block mb-2 text-sm font-medium text-slate-700 dark:text-slate-300">
+                <label className="block mb-2 text-sm font-medium text-slate-300">
                   Name
                 </label>
                 <input
                   {...register("name", { required: "Name is required" })}
-                  className="w-full px-4 py-3 transition-all bg-white border rounded-lg outline-none dark:bg-slate-950 border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-blue-600 placeholder:text-slate-400 dark:text-white"
+                  className="w-full px-4 py-3 text-white transition-all border rounded-lg outline-none bg-slate-950 border-slate-700 focus:ring-2 focus:ring-blue-600 placeholder:text-slate-400"
                   placeholder="Your Name"
                 />
                 {errors.name && (
@@ -117,7 +117,7 @@ export default function Contact() {
               </div>
 
               <div>
-                <label className="block mb-2 text-sm font-medium text-slate-700 dark:text-slate-300">
+                <label className="block mb-2 text-sm font-medium text-slate-300">
                   Email
                 </label>
                 <input
@@ -125,7 +125,7 @@ export default function Contact() {
                     required: "Email is required",
                     pattern: { value: /^\S+@\S+$/i, message: "Invalid email" },
                   })}
-                  className="w-full px-4 py-3 transition-all bg-white border rounded-lg outline-none dark:bg-slate-950 border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-blue-600 placeholder:text-slate-400 dark:text-white"
+                  className="w-full px-4 py-3 text-white transition-all border rounded-lg outline-none bg-slate-950 border-slate-700 focus:ring-2 focus:ring-blue-600 placeholder:text-slate-400"
                   placeholder="name@example.com"
                 />
                 {errors.email && (
@@ -136,12 +136,12 @@ export default function Contact() {
               </div>
 
               <div>
-                <label className="block mb-2 text-sm font-medium text-slate-700 dark:text-slate-300">
+                <label className="block mb-2 text-sm font-medium text-slate-300">
                   Subject
                 </label>
                 <input
                   {...register("subject", { required: "Subject is required" })}
-                  className="w-full px-4 py-3 transition-all bg-white border rounded-lg outline-none dark:bg-slate-950 border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-blue-600 placeholder:text-slate-400 dark:text-white"
+                  className="w-full px-4 py-3 text-white transition-all border rounded-lg outline-none bg-slate-950 border-slate-700 focus:ring-2 focus:ring-blue-600 placeholder:text-slate-400"
                   placeholder="Project Inquiry"
                 />
                 {errors.subject && (
@@ -152,13 +152,13 @@ export default function Contact() {
               </div>
 
               <div>
-                <label className="block mb-2 text-sm font-medium text-slate-700 dark:text-slate-300">
+                <label className="block mb-2 text-sm font-medium text-slate-300">
                   Message
                 </label>
                 <textarea
                   {...register("message", { required: "Message is required" })}
                   rows={4}
-                  className="w-full px-4 py-3 transition-all bg-white border rounded-lg outline-none resize-none dark:bg-slate-950 border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-blue-600 placeholder:text-slate-400 dark:text-white"
+                  className="w-full px-4 py-3 text-white transition-all border rounded-lg outline-none resize-none bg-slate-950 border-slate-700 focus:ring-2 focus:ring-blue-600 placeholder:text-slate-400"
                   placeholder="Your message..."
                 />
                 {errors.message && (
@@ -226,18 +226,16 @@ function ContactInfoItem({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex items-center gap-4 p-4 transition-colors rounded-xl hover:bg-slate-50 dark:hover:bg-slate-900 group"
+      className="flex items-center gap-4 p-4 transition-colors rounded-xl hover:bg-slate-900 group"
     >
-      <div className="p-3 text-blue-600 transition-transform bg-blue-100 rounded-lg dark:bg-blue-900/30 dark:text-blue-400 group-hover:scale-110">
+      <div className="p-3 text-blue-400 transition-transform rounded-lg bg-blue-900/30 group-hover:scale-110">
         {icon}
       </div>
       <div>
         <h4 className="text-sm font-medium tracking-wider uppercase text-slate-400">
           {label}
         </h4>
-        <p className="text-lg font-semibold text-slate-900 dark:text-white">
-          {value}
-        </p>
+        <p className="text-lg font-semibold text-white">{value}</p>
       </div>
     </a>
   );

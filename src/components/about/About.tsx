@@ -12,10 +12,7 @@ export default function About() {
   const [isActive, setIsActive] = useState(false);
 
   return (
-    <Section
-      id="about"
-      className="relative overflow-hidden bg-white dark:bg-slate-950"
-    >
+    <Section id="about" className="relative overflow-hidden bg-slate-950">
       <div ref={sectionRef} className="relative w-full py-10">
         <TubeLight sectionRef={sectionRef} />
         <motion.div
@@ -80,10 +77,10 @@ export default function About() {
 
           {/* Content Side */}
           <div className="w-full md:w-1/2">
-            <h2 className="mb-6 text-3xl font-bold md:text-4xl text-slate-900 dark:text-white">
+            <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">
               About Me
             </h2>
-            <div className="space-y-4 leading-relaxed text-slate-600 dark:text-slate-400">
+            <div className="space-y-4 leading-relaxed text-slate-400">
               <p>
                 Hi, I&apos;m Sourabh Nateria - a passionate MERN Stack Software
                 Engineer with 2+ years of experience building and deploying
