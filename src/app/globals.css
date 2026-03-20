@@ -47,7 +47,7 @@ html {
   initial-letter: true;
 } */
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   body {
     background-color: var(--color-dark);
     color: var(--color-light);
@@ -60,4 +60,4 @@ html {
   ::-webkit-scrollbar-thumb:hover {
     background: #475569;
   }
-}
+} */
