@@ -4,11 +4,12 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Section from "@/components/ui/Section";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { TubeLight } from "@/components/ui/TubeLight";
 
 export default function About() {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const [isActive, setIsActive] = useState(false);
 
   return (
     <Section
@@ -26,12 +27,17 @@ export default function About() {
         >
           {/* Image Side */}
           <div className="flex justify-center w-full md:w-1/2">
-            <div className="relative w-64 h-64 md:w-80 md:h-80 group perspective-1000">
+            <div
+              className={`relative w-64 h-64 md:w-80 md:h-80 group perspective-1000`}
+              onTouchStart={() => setIsActive(true)}
+              onTouchEnd={() => setIsActive(false)}
+            >
               {/* Photo 3 (Left Wing) */}
               <div
-                className="absolute inset-0 rounded-2xl overflow-hidden shadow-2xl transition-all duration-500 z-10 bg-slate-200 origin-bottom-right
-              rotate-[-6deg] translate-x-[-10px] scale-95 opacity-80
-              group-hover:rotate-[-12deg] group-hover:translate-x-[-50%] group-hover:scale-100 group-hover:opacity-100"
+                className={`absolute inset-0 rounded-2xl overflow-hidden shadow-2xl transition-all duration-500 z-10 bg-slate-200 origin-bottom-right
+        rotate-[-6deg] translate-x-[-10px] scale-95 opacity-80
+        group-hover:rotate-[-12deg] group-hover:translate-x-[-50%] group-hover:scale-100 group-hover:opacity-100
+        ${isActive ? "!rotate-[-12deg] !-translate-x-[50%] !scale-100 !opacity-100" : ""}`}
               >
                 <Image
                   src="/images/profiles/photo3.jpg"
@@ -40,11 +46,13 @@ export default function About() {
                   className="object-cover"
                 />
               </div>
+
               {/* Photo 2 (Right Wing) */}
               <div
-                className="absolute inset-0 rounded-2xl overflow-hidden shadow-2xl transition-all duration-500 z-20 bg-slate-200 origin-bottom-left
-              rotate-[6deg] translate-x-[10px] scale-95 opacity-80
-              group-hover:rotate-[12deg] group-hover:translate-x-[50%] group-hover:scale-100 group-hover:opacity-100"
+                className={`absolute inset-0 rounded-2xl overflow-hidden shadow-2xl transition-all duration-500 z-20 bg-slate-200 origin-bottom-left
+        rotate-[6deg] translate-x-[10px] scale-95 opacity-80
+        group-hover:rotate-[12deg] group-hover:translate-x-[50%] group-hover:scale-100 group-hover:opacity-100
+        ${isActive ? "!rotate-[12deg] !translate-x-[50%] !scale-100 !opacity-100" : ""}`}
               >
                 <Image
                   src="/images/profiles/photo21.png"
@@ -53,8 +61,13 @@ export default function About() {
                   className="object-cover"
                 />
               </div>
+
               {/* Photo 1 (Center) */}
-              <div className="absolute inset-0 z-30 overflow-hidden transition-all duration-500 scale-100 rotate-0 shadow-2xl rounded-2xl bg-slate-200 group-hover:scale-105 group-hover:-translate-y-2 group-hover:shadow-blue-500/20">
+              <div
+                className={`absolute inset-0 z-30 overflow-hidden transition-all duration-500 scale-100 rotate-0 shadow-2xl rounded-2xl bg-slate-200
+        group-hover:scale-105 group-hover:-translate-y-2 group-hover:shadow-blue-500/20
+        ${isActive ? "!scale-105 !-translate-y-2" : ""}`}
+              >
                 <Image
                   src="/images/profiles/photo1.jpeg"
                   alt="Sourabh Nateria 1"

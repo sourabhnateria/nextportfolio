@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Outfit, JetBrains_Mono } from "next/font/google";
-// import Navbar from "@/components/layout/Navbar"; // Replaced by Dock
 import Footer from "@/components/layout/Footer";
 import Terminal from "@/components/terminal/Terminal";
 import ScrollProgress from "@/components/ui/ScrollProgress";
@@ -9,6 +8,7 @@ import SpotlightCursor from "@/components/ui/SpotlightCursor";
 import { Dock } from "@/components/ui/Dock";
 import { SocialFloater } from "@/components/ui/SocialFloater";
 import { MobileMenu } from "@/components/ui/MobileMenu";
+import { ThemeProvider } from "@/components/providers/ThemeProvider"; // ← add this
 import Script from "next/script";
 import "./globals.css";
 
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   title: "Sourabh Nateria | Full-Stack Engineer",
   description:
     "Portfolio of Sourabh Nateria - Full-Stack Engineer & Computer Science Graduate. Specializing in Web Development and Generative AI.",
-  metadataBase: new URL("https://www.linkedin.com/in/sourabhnateria/"),
+  metadataBase: new URL("https://sourabhnateria.vercel.app"), // ← fixed
   robots: {
     index: true,
     follow: true,
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     description:
       "Portfolio of Sourabh Nateria - Full-Stack Engineer & Computer Science Graduate. Specializing in Web Development and Generative AI.",
     type: "website",
-    url: "https://www.linkedin.com/in/sourabhnateria/",
+    url: "https://sourabhnateria.vercel.app",
     siteName: "Sourabh Nateria",
   },
 };
@@ -79,10 +79,10 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Person",
               name: "Sourabh Nateria",
-              url: "",
+              url: "https://sourabhnateria.vercel.app",
               jobTitle: "Full-Stack Engineer",
               sameAs: [
-                "https://www.linkedin.com/in/sourabhnateria/",
+                "https://github.com/sourabhnateria",
                 "https://www.linkedin.com/in/sourabhnateria",
               ],
               knowsAbout: [
@@ -96,24 +96,25 @@ export default function RootLayout({
             }),
           }}
         />
-        <div className="hidden md:block">
-          <SpotlightCursor />
-        </div>
-        <CommandMenu />
-        <ScrollProgress />
-
-        {/* NEW NAVIGATION ARCHITECTURE */}
-        <div className="hidden md:block">
-          <Dock />
-          <SocialFloater />
-        </div>
-        <MobileMenu />
-
-        {/* Replaced Navbar with Dock/Floater. Added pb-32 to account for Dock height */}
-        <main className="flex flex-col min-h-screen pb-32">{children}</main>
-
-        <Terminal />
-        <Footer />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem={false}
+        >
+          <div className="hidden md:block">
+            <SpotlightCursor />
+          </div>
+          <CommandMenu />
+          <ScrollProgress />
+          <div className="hidden md:block">
+            <Dock />
+            <SocialFloater />
+          </div>
+          <MobileMenu />
+          <main className="flex flex-col min-h-screen pb-32">{children}</main>
+          <Terminal />
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
