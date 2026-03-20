@@ -10,10 +10,10 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative flex items-center min-h-screen pt-20 overflow-hidden bg-slate-50 dark:bg-slate-950"
+      className="relative flex items-center min-h-screen pt-20 overflow-hidden bg-slate-950"
     >
       {/* Dynamic Background */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-b from-white to-slate-50 dark:from-slate-950 dark:to-slate-900">
+      <div className="absolute inset-0 z-0 bg-gradient-to-b from-slate-950 to-slate-900">
         <NeuralBackground />
       </div>
 
