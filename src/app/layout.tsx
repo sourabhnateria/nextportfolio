@@ -69,7 +69,7 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body
-        className={`${sans.variable} ${mono.variable} antialiased dark:bg-slate-950 dark:text-slate-50 font-sans relative`}
+        className={`${sans.variable} ${mono.variable} antialiased bg-slate-950 text-slate-50 font-sans relative`}
       >
         <Script
           id="json-ld"
