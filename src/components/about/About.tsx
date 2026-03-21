@@ -125,9 +125,7 @@ function InfoItem({ label, value }: { label: string; value: string }) {
       <span className="text-sm font-semibold tracking-wider uppercase text-slate-400">
         {label}
       </span>
-      <span className="font-medium text-slate-800 dark:text-slate-200">
-        {value}
-      </span>
+      <span className="font-medium text-slate-200">{value}</span>
     </div>
   );
 }

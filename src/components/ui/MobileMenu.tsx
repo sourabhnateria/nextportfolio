@@ -38,7 +38,7 @@ export function MobileMenu() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: "-100%" }}
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
-            className="fixed inset-0 z-50 flex flex-col px-6 pt-24 pb-8 overflow-y-auto bg-slate-50/95 dark:bg-slate-950/95 backdrop-blur-xl md:hidden"
+            className="fixed inset-0 z-50 flex flex-col px-6 pt-24 pb-8 overflow-y-auto bg-slate-950/95 backdrop-blur-xl md:hidden"
           >
             {/* Navigation Links */}
             <nav className="flex flex-col gap-2 mb-12">
@@ -58,8 +58,8 @@ export function MobileMenu() {
                       href={item.href}
                       className={`flex items-center gap-4 p-4 rounded-xl text-lg font-medium transition-colors ${
                         isActive
-                          ? "bg-blue-100 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400"
-                          : "text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900"
+                          ? "bg-blue-900/20 text-blue-400"
+                          : "text-slate-400 hover:bg-slate-900"
                       }`}
                       onClick={() => setIsOpen(false)}
                     >
@@ -83,7 +83,7 @@ export function MobileMenu() {
                     initial={{ opacity: 0, scale: 0 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.4 + i * 0.05 }}
-                    className="p-3 border rounded-full bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 border-slate-200 dark:border-slate-800"
+                    className="p-3 border rounded-full bg-slate-900 text-slate-400 hover:text-blue-400 border-slate-800"
                   >
                     <social.icon size={20} />
                   </motion.a>
