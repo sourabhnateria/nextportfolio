@@ -99,13 +99,13 @@ export function ProjectCarousel() {
       {/* Navigation Buttons */}
       <button
         onClick={prevProject}
-        className="absolute left-4 md:left-12 z-30 p-3 bg-white/10 dark:bg-slate-900/50 backdrop-blur-md border border-white/20 rounded-full text-white hover:bg-white/20 transition-all"
+        className="absolute p-3 text-white transition-all border rounded-full md:z-30 left-1 md:left-12 bg-white/10 dark:bg-slate-900/50 backdrop-blur-md border-white/20 hover:bg-white/20"
       >
         <ArrowLeft size={24} />
       </button>
       <button
         onClick={nextProject}
-        className="absolute right-4 md:right-12 z-30 p-3 bg-white/10 dark:bg-slate-900/50 backdrop-blur-md border border-white/20 rounded-full text-white hover:bg-white/20 transition-all"
+        className="absolute p-3 text-white transition-all border rounded-full md:z-30 right-1 md:right-12 bg-white/10 dark:bg-slate-900/50 backdrop-blur-md border-white/20 hover:bg-white/20"
       >
         <ArrowRight size={24} />
       </button>
@@ -153,9 +153,9 @@ export function ProjectCarousel() {
             </div>
 
             {/* Content Area */}
-            <div className="p-6 flex flex-col h-1/2 justify-between">
+            <div className="flex flex-col justify-between p-6 h-1/2">
               <div>
-                <div className="flex justify-between items-start mb-2">
+                <div className="flex items-start justify-between mb-2">
                   <h3 className="text-2xl font-bold text-white">
                     {project.title}
                   </h3>
@@ -164,7 +164,7 @@ export function ProjectCarousel() {
                       <a
                         href={project.github}
                         target="_blank"
-                        className="text-slate-400 hover:text-white transition-colors"
+                        className="transition-colors text-slate-400 hover:text-white"
                       >
                         <Github size={20} />
                       </a>
@@ -173,7 +173,7 @@ export function ProjectCarousel() {
                       <a
                         href={project.link}
                         target="_blank"
-                        className="text-slate-400 hover:text-white transition-colors"
+                        className="transition-colors text-slate-400 hover:text-white"
                       >
                         <ExternalLink size={20} />
                       </a>
@@ -181,7 +181,7 @@ export function ProjectCarousel() {
                   </div>
                 </div>
 
-                <p className="text-slate-400 text-sm mb-4 line-clamp-3">
+                <p className="mb-4 text-sm text-slate-400 line-clamp-3">
                   {project.description}
                 </p>
 
@@ -190,13 +190,13 @@ export function ProjectCarousel() {
                   {project.techStack?.slice(0, 3).map((tech) => (
                     <span
                       key={tech}
-                      className="px-2 py-1 text-xs font-medium bg-slate-800 text-slate-300 rounded-md border border-slate-700"
+                      className="px-2 py-1 text-xs font-medium border rounded-md bg-slate-800 text-slate-300 border-slate-700"
                     >
                       {tech}
                     </span>
                   ))}
                   {project.techStack && project.techStack.length > 3 && (
-                    <span className="px-2 py-1 text-xs font-medium bg-slate-800 text-slate-300 rounded-md border border-slate-700">
+                    <span className="px-2 py-1 text-xs font-medium border rounded-md bg-slate-800 text-slate-300 border-slate-700">
                       +{project.techStack.length - 3}
                     </span>
                   )}

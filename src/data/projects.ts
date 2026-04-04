@@ -13,6 +13,25 @@ export interface Project {
 
 export const projectsData: Project[] = [
   {
+    id: "Deep Research",
+    title: "Deep Research",
+    description:
+      "intelligent system that generates follow-up questions, crafts optimal search queries, and compiles comprehensive research reports.",
+    image: "/images/projects/deepresearch.png",
+    link: "https://deep-research-brown-delta.vercel.app/",
+    github: "https://github.com/sourabhnateria",
+    tags: ["Deep Research Ai Agent", "Next.js", "Full Stack"],
+    techStack: [
+      "Next.js",
+      "Vercel-AI-sdk",
+      "Tailwind CSS",
+      "OpenAI API",
+      "Exa API",
+    ],
+    problem: "",
+    outcome: "",
+  },
+  {
     id: "EasyAi",
     title: "EasyAi",
     description:
@@ -22,10 +41,8 @@ export const projectsData: Project[] = [
     github: "https://github.com/sourabhnateria",
     tags: ["Ai Website Builder", "React.js", "Full Stack"],
     techStack: ["React.js", "Node.js", "Tailwind CSS", "OpenAI API", "Neondb"],
-    problem:
-      "Organizing Secret Santa events manually is chaotic and lacks privacy.",
-    outcome:
-      "Streamlined event creation and participant assignment with a polished UI.",
+    problem: "",
+    outcome: "",
   },
   {
     id: "Travel website",
@@ -35,10 +52,8 @@ export const projectsData: Project[] = [
     link: "https://n-n-travel-hub.vercel.app/",
     tags: ["Utility", "Security", "Web Tool"],
     techStack: ["React", "Node.js", "Express"],
-    problem:
-      "Sharing complex WiFi passwords manually is error-prone and insecure.",
-    outcome:
-      "Created a pure client-side solution that ensures credentials never leave the user's device.",
+    problem: "",
+    outcome: "",
   },
   {
     id: "scraping",
@@ -55,9 +70,7 @@ export const projectsData: Project[] = [
       "Api integration",
       "Airtable",
     ],
-    problem:
-      "Building a performant 3D puzzle in the browser requires low-level optimization.",
-    outcome:
-      "Achieved 60fps rendering on mobile devices with smooth touch controls.",
+    problem: "",
+    outcome: "",
   },
 ];
