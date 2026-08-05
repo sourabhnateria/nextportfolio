@@ -10,23 +10,28 @@ export default function Footer() {
 
         <div className="z-10 flex gap-6">
           <SocialLink
-            href="https://github.com/sourabhnateria"
+            // href="https://github.com/sourabhnateria"
+            href="/"
             icon={<Github size={20} />}
           />
           <SocialLink
-            href="https://www.linkedin.com/in/sourabhnateria/"
+            // href="https://www.linkedin.com/in/sourabhnateria/"
+            href="/"
             icon={<Linkedin size={20} />}
           />
           <SocialLink
-            href="https://x.com/sourabh_nateria"
+            // href="https://x.com/sourabh_nateria"
+            href="/"
             icon={<Twitter size={20} />}
           />
           <SocialLink
-            href="https://www.instagram.com/nateriasourabh/"
+            // href="https://www.instagram.com/nateriasourabh/"
+            href="/"
             icon={<Instagram size={20} />}
           />
           <SocialLink
-            href="mailto:sourabhnateria.cse@gmail.com"
+            // href="mailto:sourabhnateria.cse@gmail.com"
+            href="/"
             icon={<Mail size={20} />}
           />
         </div>

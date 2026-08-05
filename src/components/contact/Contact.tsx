@@ -75,9 +75,9 @@ export default function Contact() {
               icon={<MapPin />}
               label="Address"
               value="Bhopal, India"
-              href="https://maps.app.goo.gl/WqGXgfNHutuimL9o9"
+              href="https://maps.app.goo.gl/jJAAerxU9Tn7LTYt8"
             />
-            <ContactInfoItem
+            {/* <ContactInfoItem
               icon={<Phone />}
               label="Phone"
               value="+91 9479906370"
@@ -88,7 +88,7 @@ export default function Contact() {
               label="Email"
               value="sourabhnateria.cse@gmail.com"
               href="mailto:sourabhnateria.cse@gmail.com"
-            />
+            /> */}
           </motion.div>
 
           {/* Form */}

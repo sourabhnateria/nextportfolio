@@ -7,14 +7,14 @@ import { Linkedin, Mail } from "lucide-react";
 import { SiGithub, SiX } from "@icons-pack/react-simple-icons";
 
 export const SOCIALS = [
-  { name: "GitHub", href: "https://github.com/sourabhnateria", icon: SiGithub },
+  { name: "GitHub", href: "/", icon: SiGithub },
   {
     name: "LinkedIn",
-    href: "https://linkedin.com/in/sourabhnateria",
+    href: "/",
     icon: Linkedin,
   },
-  { name: "Twitter", href: "https://x.com/sourabh_nateria", icon: SiX },
-  { name: "Email", href: "mailto:sourabhnateria.cse@gmail.com", icon: Mail },
+  { name: "Twitter", href: "/", icon: SiX },
+  { name: "Email", href: "/", icon: Mail },
 ];
 
 export function SocialFloater() {

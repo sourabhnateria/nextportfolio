@@ -110,7 +110,7 @@ export default function About() {
               <InfoItem label="Name" value="Sourabh Nateria" />
               <InfoItem label="Role" value="Full-stack Engineer" />
               <InfoItem label="Location" value="Bhopal, India" />
-              <InfoItem label="Email" value="sourabhnateria.cse@gmail.com" />
+              {/* <InfoItem label="Email" value="sourabhnateria.cse@gmail.com" /> */}
             </div>
           </div>
         </motion.div>

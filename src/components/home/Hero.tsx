@@ -83,7 +83,8 @@ export default function Hero() {
               </a>
 
               <a
-                href="https://github.com/sourabhnateria"
+                // href="https://github.com/sourabhnateria"
+                href="/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center transition-colors border rounded-full w-14 h-14 border-white/20 text-slate-300 hover:border-blue-400 hover:text-blue-400 backdrop-blur-sm bg-white/5"
